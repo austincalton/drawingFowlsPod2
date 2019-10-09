@@ -1,0 +1,117 @@
+// Widescreens
+@include mediaXl {
+
+}
+// Desktops and Laptops
+@include mediaLg {
+
+}
+// Tablets and Small Laptops
+@include mediaMd {
+    body {
+        overflow-x: hidden;
+        margin-right: 0;
+    }
+    .home-grid {
+        display: grid;
+        grid-gap: 3vw;
+        grid-template-areas: 
+        'title' 
+        'hand';
+        grid-template-columns: repeat(1, 100vw);
+        padding-bottom: 10vh;
+
+        .title, h1, h2, h3 {
+            font-size: 20vw;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            font-family: 'Abel', sans-serif;
+            margin: 0;
+            padding-top: 3vh;
+            line-height: 20vw;
+            align-items: center;
+            text-align: center;
+        }
+        .title-border {
+            display: inline-block;
+            border: solid 3px #fff;
+            border-width: 3px 3px 20px 20px;
+            border-radius: 30px;
+            margin: 5vw 5vw 5vw 5vw;
+            padding: 1vw;
+        }
+        .image-main {
+    
+            .logo {
+                animation-delay: 0ms;
+                animation-name: fade;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                width: 70%;
+                height: auto;
+                padding-top: 13vw;
+            }
+        }
+    }
+    .media-title {
+        text-align: center;
+        font-family: 'Abel', sans-serif;
+        font-size: 15vw;
+        color: #fff;
+        margin-top: 25vw;
+    }
+    .feed {
+        text-align: center;
+        padding: 0;
+        margin-top: 10vw;
+        margin-bottom: 20vh;
+        display: grid;
+        grid-template-columns: repeat(1, 100vw);
+        grid-template-areas: 
+        'twitter'
+        'player';
+
+        .twitter {
+            width: 80vw;
+            height: 120vw;
+            text-align: center;
+            margin-left: 9vw;
+        }
+    
+        .player {
+            margin-top: 10vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        
+            .preview {
+                width: 70%;
+                height: auto;
+            }
+            .podcast-link {
+                text-decoration: none;
+                margin-top: 5vh;
+            
+                #apple {
+                    padding: 3vw;
+                    border: solid #fff 2px;
+                    color: #fff;
+                    border-radius: 15px;
+                    font-family: 'Abel', sans-serif;
+                    font-size: 5vw;
+        
+                    &:hover {
+                        cursor: pointer;
+                        background: #fff;
+                        color: $secondary-color;
+        
+                    }
+                }
+            }
+        }
+    }
+}
+// Mobile
+@include mediaSm {
+
+}

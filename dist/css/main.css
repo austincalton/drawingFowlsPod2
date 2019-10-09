@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css?family=Abel|Varela+Round&display=swap");
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: #00ADC9;
+  overflow-x: hidden; }
+
+@keyframes fade {
+  0% {
+    transform: rotateY(0deg); }
+  100% {
+    transform: rotateY(360deg); } }
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2); }
+
+.home-grid {
+  background: rgba(36, 27, 85, 0.5);
+  display: grid;
+  text-align: center;
+  grid-gap: 3vw;
+  grid-template-areas: 'title hand';
+  grid-template-columns: repeat(2, 50%);
+  border-bottom: solid 3rem #fff;
+  padding-bottom: 10vh; }
+  .home-grid .title, .home-grid h1, .home-grid h2, .home-grid h3 {
+    font-size: 13vw;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: 'Abel', sans-serif;
+    margin: 0;
+    padding-top: 8vh;
+    line-height: 12vw;
+    align-items: right;
+    text-align: right; }
+  .home-grid .title-border {
+    display: inline-block;
+    border: solid 3px #fff;
+    border-width: 3px 3px 30px 30px;
+    border-radius: 30px;
+    margin-left: 5vw;
+    padding: 1vw; }
+  .home-grid .image-main .logo {
+    animation-delay: 0ms;
+    animation-name: fade;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    width: 70%;
+    height: auto;
+    padding-top: 13vw; }
+
+.media-title {
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  font-size: 10vw;
+  color: #fff;
+  margin-bottom: 3vh; }
+
+.feed {
+  text-align: center;
+  padding: 1vw;
+  margin-bottom: 20vh;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-areas: 'twitter player'; }
+  .feed .twitter {
+    width: 80%;
+    height: 52vw;
+    text-align: center;
+    border: solid 2vw rgba(36, 27, 85, 0.5);
+    border-radius: 15px;
+    margin-left: 9vw; }
+  .feed .player {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .feed .player .preview {
+      width: 57%;
+      height: auto; }
+    .feed .player .podcast-link {
+      text-decoration: none;
+      margin-top: 3vh; }
+      .feed .player .podcast-link #apple {
+        padding: 10px;
+        border: solid #fff 2px;
+        color: #fff;
+        border-radius: 15px;
+        font-family: 'Abel', sans-serif;
+        font-size: 2vw; }
+        .feed .player .podcast-link #apple:hover {
+          cursor: pointer;
+          background: #fff;
+          color: #00ADC9; }
+
+#footer {
+  padding: 1vh;
+  text-align: center;
+  color: #00ADC9;
+  background: #fff;
+  font-family: 'Abel', sans-serif; }
+
+#renny {
+  background-color: #fff;
+  border: solid 3px #00ADC9;
+  color: #00ADC9;
+  padding: 3px;
+  margin-bottom: 1vh;
+  border-radius: 15px; }
+
+#renny:hover {
+  cursor: pointer;
+  background: #00ADC9;
+  color: #fff; }
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    margin-right: 0; }
+  .home-grid {
+    display: grid;
+    grid-gap: 3vw;
+    grid-template-areas: 'title'  'hand';
+    grid-template-columns: repeat(1, 100vw);
+    padding-bottom: 10vh; }
+    .home-grid .title, .home-grid h1, .home-grid h2, .home-grid h3 {
+      font-size: 20vw;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      font-family: 'Abel', sans-serif;
+      margin: 0;
+      padding-top: 3vh;
+      line-height: 20vw;
+      align-items: center;
+      text-align: center; }
+    .home-grid .title-border {
+      display: inline-block;
+      border: solid 3px #fff;
+      border-width: 3px 3px 20px 20px;
+      border-radius: 30px;
+      margin: 5vw 5vw 5vw 5vw;
+      padding: 1vw; }
+    .home-grid .image-main .logo {
+      animation-delay: 0ms;
+      animation-name: fade;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      width: 70%;
+      height: auto;
+      padding-top: 13vw; }
+  .media-title {
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+    font-size: 15vw;
+    color: #fff;
+    margin-top: 25vw; }
+  .feed {
+    text-align: center;
+    padding: 0;
+    margin-top: 10vw;
+    margin-bottom: 20vh;
+    display: grid;
+    grid-template-columns: repeat(1, 100vw);
+    grid-template-areas: 'twitter' 'player'; }
+    .feed .twitter {
+      width: 80vw;
+      height: 120vw;
+      text-align: center;
+      margin-left: 9vw; }
+    .feed .player {
+      margin-top: 10vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .feed .player .preview {
+        width: 70%;
+        height: auto; }
+      .feed .player .podcast-link {
+        text-decoration: none;
+        margin-top: 5vh; }
+        .feed .player .podcast-link #apple {
+          padding: 3vw;
+          border: solid #fff 2px;
+          color: #fff;
+          border-radius: 15px;
+          font-family: 'Abel', sans-serif;
+          font-size: 5vw; }
+          .feed .player .podcast-link #apple:hover {
+            cursor: pointer;
+            background: #fff;
+            color: #00ADC9; } }
