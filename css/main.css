@@ -104,13 +104,16 @@ body {
   color: #00ADC9;
   background: #fff;
   font-family: 'Abel', sans-serif; }
+  #footer a {
+    text-decoration: none;
+    text-align: center; }
 
 #renny {
   background-color: #fff;
-  border: solid 3px #00ADC9;
+  border: solid 2px #00ADC9;
   color: #00ADC9;
   padding: 3px;
-  margin-bottom: 1vh;
+  margin-bottom: 2vh;
   border-radius: 15px; }
 
 #renny:hover {
@@ -118,6 +121,16 @@ body {
   background: #00ADC9;
   color: #fff;
   transition: all 0.5s ease-out; }
+
+.icons {
+  margin-top: 0;
+  display: inline-block; }
+  .icons a {
+    padding: .3rem;
+    color: #00ADC9; }
+    .icons a:hover {
+      color: #241B55;
+      transition: all 0.5s ease-out; }
 
 @media screen and (max-width: 768px) {
   @keyframes clickMe {
@@ -164,7 +177,7 @@ body {
   .media-title {
     text-align: center;
     font-family: 'Abel', sans-serif;
-    font-size: 15vw;
+    font-size: 20vw;
     color: #fff;
     margin-top: 25vw; }
   .feed {
