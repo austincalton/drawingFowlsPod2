@@ -95,6 +95,7 @@ body {
         .feed .player .podcast-link #apple:hover {
           cursor: pointer;
           background: #fff;
+          transition: all 0.5s ease-out;
           color: #00ADC9; }
 
 #footer {
@@ -115,9 +116,17 @@ body {
 #renny:hover {
   cursor: pointer;
   background: #00ADC9;
-  color: #fff; }
+  color: #fff;
+  transition: all 0.5s ease-out; }
 
 @media screen and (max-width: 768px) {
+  @keyframes clickMe {
+    0% {
+      opacity: 1; }
+    50% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
   body {
     overflow-x: hidden;
     margin-right: 0; }
@@ -188,8 +197,13 @@ body {
           color: #fff;
           border-radius: 15px;
           font-family: 'Abel', sans-serif;
-          font-size: 5vw; }
+          font-size: 5vw;
+          animation-name: clickMe;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+          animation-delay: 0ms; }
           .feed .player .podcast-link #apple:hover {
             cursor: pointer;
             background: #fff;
-            color: #00ADC9; } }
+            color: #00ADC9;
+            animation: none; } }
